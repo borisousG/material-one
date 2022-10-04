@@ -1,0 +1,48 @@
+<div class="navigator-container">
+    <mat-card style="padding: 0;">
+        <img mat-card-image src="./assets/img/avatar.png" alt="Photo of a Shiba Inu">
+    </mat-card>
+
+    <mat-action-list *ngIf="false">
+        <h3 matSubheader>Sección 1</h3>
+        <mat-action-list>
+            <mat-list-item *ngFor="let menu of menus" (click)="goTo(menu)">
+                <mat-icon matListIcon>folder</mat-icon>
+                <h4 matLine>{{menu.title}}</h4>
+                <p matLine class="demo-2"> {{menu.subtitle}} </p>
+            </mat-list-item>
+            <mat-list-item *ngFor="let menu of menus" (click)="goTo(menu)">
+                <h3 matLine> {{menu.title}} </h3>
+                <p matLine>
+                    <span> {{menu.subtitle}} </span>
+                    <span class="demo-2"> -- {{menu.section}} </span>
+                </p>
+            </mat-list-item>
+        </mat-action-list>
+        <mat-divider></mat-divider>
+        <h3 matSubheader>Sección 2</h3>
+        <mat-list-item *ngFor="let menu of menus" (click)="goTo(menu)">
+            <mat-icon matListIcon>note</mat-icon>
+            <h4 matLine>{{menu.title}}</h4>
+            <p matLine class="demo-2"> {{menu.subtitle}} </p>
+        </mat-list-item>
+        <mat-list-item *ngFor="let menu of menus" (click)="goTo(menu)">
+            <img matListAvatar src="https://media.geeksforgeeks.org/wp-content/uploads/20210209004413/AVATAR2.png" alt="...">
+            <h3 matLine> {{menu.title}} </h3>
+            <p matLine>
+                <span> {{menu.subtitle}} </span>
+                <span class="demo-2"> -- {{menu.section}} </span>
+            </p>
+        </mat-list-item>
+    </mat-action-list>
+
+    <mat-divider></mat-divider>
+    <mat-action-list>
+        <mat-action-list>
+            <mat-list-item *ngFor="let category of categories" [routerLink]="'category/' + category.code" routerLinkActive="active-menu">
+                <p matLine> {{category.name}} </p>
+            </mat-list-item>
+        </mat-action-list>
+        <mat-divider></mat-divider>
+    </mat-action-list>
+</div>

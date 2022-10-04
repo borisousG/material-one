@@ -1,0 +1,68 @@
+@use "@angular/material" as mat;
+:root {
+    --primary-color: #141414;
+    --accent-color: #b2b2b2;
+    --error-color: #ce6464;
+    --toolbar-color: #fff;
+    --contrast-light: #ffffff;
+    --contrast-grey: #b2b2b2;
+    --contrast-dark: #000000;
+    --checkbox-background-color: #fa3c0f;
+    --checkbox-text-color: #ffffff
+}
+
+@include mat.core();
+$default-primary: ( 50: var(--primary-color), 100: var(--primary-color), 200: var(--primary-color), 300: var(--primary-color), 400: var(--primary-color), 500: var(--primary-color), 600: var(--primary-color), 700: var(--primary-color), 800: var(--primary-color), 900: var(--primary-color), contrast: ( 50: var(--contrast-light), 100: var(--contrast-light), 200: var(--contrast-light), 300: var(--contrast-light), 400: var(--contrast-light), 500: var(--contrast-light), 600: var(--contrast-light), 700: var(--contrast-light), 800: var(--contrast-light), 900: var(--contrast-light)));
+$my-app-primary: mat.define-palette($default-primary);
+$my-app-accent: mat.define-palette(mat.$pink-palette, A200, A100, A400);
+$my-app-warn: mat.define-palette(mat.$red-palette);
+$my-app-theme: mat.define-light-theme( ( color: ( primary: $my-app-primary, accent: $my-app-accent, warn: $my-app-warn, ), ));
+@include mat.all-component-themes($my-app-theme);
+html,
+body {
+    height: 100%;
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+html,
+body,
+.mat-drawer-content {
+    height: 100%;
+    background-color: var(--primary-color);
+}
+
+body {
+    margin: 0;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+}
+
+.mat-drawer-inner-container {
+    overflow: hidden !important;
+    background-color: #191919;
+    // overflow-x: hidden !important;
+    // overflow-y: auto !important;
+}
+
+::-webkit-scrollbar {
+    width: 6px;
+    background: transparent;
+}
+
+::-webkit-scrollbar-track {
+    box-shadow: inset 0 0 5px #000;
+    background-color: #000;
+    border-radius: 0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #b30000;
+    border-radius: 2px;
+}
+
+ ::-webkit-scrollbar-thumb:hover {
+    background: #d60404;
+}

@@ -1,0 +1,75 @@
+.btn-container-row {
+    position: relative;
+    height: 60px;
+}
+
+.main-btn {
+    height: 27.75px;
+    min-width: 50px;
+    position: relative;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    margin-top: 1px;
+    padding-top: 8px;
+    font-family: Roboto, "Helvetica Neue", sans-serif;
+    font-size: 14px;
+    font-weight: 500;
+}
+
+.border-btn {
+    height: 30px;
+    width: 30px;
+    border-radius: 8px;
+    transform: rotate(45deg);
+}
+
+.btn-row {
+    display: flex;
+    overflow: hidden;
+    position: absolute;
+}
+
+.corner-container {
+    height: 34px;
+    width: 14px;
+}
+
+.corner-container.left {
+    padding: 4px 0 0 3px;
+}
+
+.corner-container.right {
+    padding: 4px 3px 0 0;
+}
+
+.truncate {
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+}
+
+.truncate.right {
+    position: relative;
+}
+
+.border-btn.right {
+    position: absolute;
+    left: -16px;
+}
+
+.noselect {
+    -webkit-touch-callout: none;
+    /* iOS Safari */
+    -webkit-user-select: none;
+    /* Safari */
+    -khtml-user-select: none;
+    /* Konqueror HTML */
+    -moz-user-select: none;
+    /* Old versions of Firefox */
+    -ms-user-select: none;
+    /* Internet Explorer/Edge */
+    user-select: none;
+    /* Non-prefixed version, currently
+                                    supported by Chrome, Edge, Opera and Firefox */
+}

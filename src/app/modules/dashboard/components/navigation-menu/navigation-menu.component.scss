@@ -1,0 +1,14 @@
+.navigator-container {
+    background-color: #191919;
+    // background-color: #141414;
+    p {
+        color: #ffffff;
+    }
+}
+
+.active-menu {
+    border-left: 6px solid red;
+    p {
+        font-weight: bold !important;
+    }
+}
