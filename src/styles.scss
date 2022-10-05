@@ -105,7 +105,7 @@ body {
     overflow-x: hidden !important;
 }
 
-.noselect {
+.no-select {
     -webkit-touch-callout: none;
     /* iOS Safari */
     -webkit-user-select: none;
@@ -119,4 +119,19 @@ body {
     user-select: none;
     /* Non-prefixed version, currently
                                     supported by Chrome, Edge, Opera and Firefox */
+}
+
+.loading-image {
+    background-color: #000;
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+}
+
+.mat-card-image {
+    width: 100% !important;
+    margin: 0 -16px 16px -16px;
+    overflow: hidden;
+    padding: 0 16px !important;
+    height: 100% !important;
 }

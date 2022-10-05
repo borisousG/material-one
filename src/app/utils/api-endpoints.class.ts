@@ -6,6 +6,8 @@ export class ApiEndpoints {
         return `/discover/movie?language=es-MX&with_genres=${ id }`;
     } 
 
+    static TRENDING = '/trending/all/day?&language=es-MX';
+
     static getMovieDetailEndpoint(id : string) {
         return `/movie/${ id }?&language=es-MX`;
     } 

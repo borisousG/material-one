@@ -6,14 +6,12 @@ import { AppComponent } from './app.component';
 import { MaterialModule } from './components/shared/material.module';
 import { SharedModule } from './components/shared/shared.module';
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
-import { SideMenuComponent } from './components/side-menu/side-menu.component';
 import { HttpClientModule, HTTP_INTERCEPTORS } from '@angular/common/http';
 import { ApiKeyInterceptor } from './services/interceptors/api-key.interceptor';
 
 @NgModule({
   declarations: [
     AppComponent,
-    SideMenuComponent,
   ],
   imports: [
     BrowserModule,

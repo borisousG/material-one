@@ -8,6 +8,11 @@ const routes: Routes = [
     loadChildren: () =>  import('./modules/dashboard/dashboard.module').then(m => DashboardModule),
   },
   {
+    path: '',
+    redirectTo: 'list',
+    pathMatch: 'full'    
+  },
+  {
     path: '**',
     redirectTo: 'list',
   },

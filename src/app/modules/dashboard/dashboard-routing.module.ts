@@ -11,6 +11,11 @@ const routes: Routes = [
       {
         path: ':id',
         component : MoviesListComponent,
+      },
+      {
+        path: '',
+        component : MoviesListComponent,
+        pathMatch : 'full',
       }
     ],
   }

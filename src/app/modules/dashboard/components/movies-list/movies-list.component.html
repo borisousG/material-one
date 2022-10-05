@@ -1,7 +1,9 @@
 <div class="movies-list">
     <div *ngFor="let movie of movies" class="card-container">
         <mat-card class="example-card" (click)="openDialog(movie)">
-            <img mat-card-image [alt]="movie.title" [src]="moviesDb.imageFormat(movie.poster_path)" height="300px">
+            <div class="loading-image" style="background-image : url('./assets/img/loading-image.gif');">
+                <img mat-card-image [alt]="movie.title" [src]="moviesDb.imageFormat(movie.poster_path)" loading="lazy">
+            </div>
             <mat-card-header *ngIf="showDetail">
                 <mat-card-title>{{movie.title}}</mat-card-title>
                 <mat-card-subtitle>

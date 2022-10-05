@@ -1,14 +1,16 @@
-<div [ngStyle]="{ 'background-image' : 'url(' + moviesDb.imageFormat(data.backdrop_path) + ')'}" class="modal-wallpaper">
-    <button mat-icon-button [mat-dialog-close]="data" class="close-button">
-        <mat-icon aria-hidden="false" aria-label="Cerrar" fontIcon="close"></mat-icon>
-    </button>
-    <span class="title">{{ data.title }}</span>
+<div class="loading-image" style="background-image : url('./assets/img/loading-image.gif');">
+    <div [ngStyle]="{ 'background-image' : 'url(' + moviesDb.imageFormat(data.backdrop_path) + ')'}" class="modal-wallpaper">
+        <button mat-icon-button [mat-dialog-close]="data" class="close-button">
+            <mat-icon aria-hidden="false" aria-label="Cerrar" fontIcon="close"></mat-icon>
+        </button>
+        <span class="title">{{ data.title }}</span>
+    </div>
 </div>
 
 <mat-grid-list cols="4" rowHeight="56px">
     <mat-grid-tile colspan="2">
         <span class="dialog-text green-text">
-            Calificación: {{ data.vote_average }} de 10
+            Calificación: {{ data.vote_average / 10 | percent }}
         </span>
     </mat-grid-tile>
     <mat-grid-tile colspan="2">
@@ -24,19 +26,19 @@
 </mat-grid-list>
 
 <div mat-dialog-actions class="actions">
-    <div class="button-action noselect" (click)="toogleMovie()">
-        <mat-icon *ngIf="!moviesDb.checkMovie(data.id)" class="noselect">add</mat-icon>
-        <mat-icon *ngIf="moviesDb.checkMovie(data.id)" class="noselect">done</mat-icon>
+    <div class="button-action no-select" (click)="toogleMovie()">
+        <mat-icon *ngIf="!moviesDb.checkMovie(data.id)" class="no-select">add</mat-icon>
+        <mat-icon *ngIf="moviesDb.checkMovie(data.id)" class="no-select">done</mat-icon>
         <br>
-        <span class="dialog-text noselect">
+        <span class="dialog-text no-select">
             Mi Lista
         </span>
     </div>
-    <div class="button-action noselect" (click)="toogleLike()">
-        <mat-icon *ngIf="!moviesDb.checkLike(data.id)" class="noselect material-icons-outlined">thumb_up</mat-icon>
-        <mat-icon *ngIf="moviesDb.checkLike(data.id)" class="noselect">thumb_up</mat-icon>
+    <div class="button-action no-select" (click)="toogleLike()">
+        <mat-icon *ngIf="!moviesDb.checkLike(data.id)" class="no-select material-icons-outlined">thumb_up</mat-icon>
+        <mat-icon *ngIf="moviesDb.checkLike(data.id)" class="no-select">thumb_up</mat-icon>
         <br>
-        <span class="dialog-text noselect">
+        <span class="dialog-text no-select">
             Votar
         </span>
     </div>

@@ -21,13 +21,26 @@ export class MoviesListComponent implements OnInit {
 
   ngOnInit(): void {
     this.activatedRouter.params.subscribe(params => {
-      this.currentId = params['id'].toString();
-      this.getMovies();
+      if(JSON.stringify(params)=='{}') {
+        this.getTrending();
+      }
+      else {
+        this.currentId = params['id'].toString();
+        this.getMovies();
+      }
     });
   }
 
   getMovies(){
     this.moviesDb.getMoviesByGenre(this.currentId)
+    .subscribe( (response:any) => {
+      this.movies = <MovieData[]>response['results'];
+      console.log( this.movies );
+    });
+  }
+
+  getTrending(){
+    this.moviesDb.getTrending()
     .subscribe( (response:any) => {
       this.movies = <MovieData[]>response['results'];
       console.log( this.movies );
