@@ -1,0 +1,17 @@
+.movies-list {
+    display: block;
+    text-align: center;
+}
+
+.card-container {
+    float: left;
+    width: 200px;
+    margin: 6px 16px 0;
+}
+
+.overview {
+    display: -webkit-box;
+    -webkit-line-clamp: 5;
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}

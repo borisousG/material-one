@@ -12,3 +12,22 @@
         font-weight: bold !important;
     }
 }
+
+.avatar {
+    height: 86px;
+    padding: 20px 0 10px 12px;
+    background-color: #191919;
+}
+
+.avatar img {
+    height: 72px;
+    width: auto;
+    float: left;
+}
+
+.avatar span {
+    color: #fff;
+    padding: 25px 0 0 12px;
+    float: left;
+    font-size: x-large;
+}

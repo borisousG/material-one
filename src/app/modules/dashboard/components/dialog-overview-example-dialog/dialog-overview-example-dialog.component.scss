@@ -1,0 +1,48 @@
+.modal-wallpaper {
+    height: 50%;
+    min-height: 300px;
+    width: 100%;
+    position: relative;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: 100% 100%;
+    background-color: #000;
+}
+
+.title {
+    position: absolute;
+    bottom: 0;
+    left: 0;
+    background-color: rgb(25 25 25 / 50%);
+    width: 100%;
+    min-height: 56px;
+    padding: 16px 16px 0;
+    font-size: x-large;
+}
+
+.dialog-text {
+    padding: 16px 16px 0;
+    color: #aaaaaa;
+}
+
+.actions {
+    mat-icon {
+        color: #aaaaaa;
+    }
+}
+
+.green-text {
+    color: #358c4b;
+}
+
+.close-button {
+    position: absolute;
+    right: 8px;
+    top: 8px;
+}
+
+.button-action {
+    margin: 10px;
+    padding: 10px;
+    text-align: center;
+}

@@ -1,0 +1,22 @@
+<div class="movies-list">
+    <div *ngFor="let movie of movies" class="card-container">
+        <mat-card class="example-card" (click)="openDialog(movie)">
+            <img mat-card-image [alt]="movie.title" [src]="moviesDb.imageFormat(movie.poster_path)" height="300px">
+            <mat-card-header *ngIf="showDetail">
+                <mat-card-title>{{movie.title}}</mat-card-title>
+                <mat-card-subtitle>
+                    {{movie.release_date | date}}
+                    <br> Calificación: {{ movie.vote_average }}
+                </mat-card-subtitle>
+            </mat-card-header>
+            <mat-card-content *ngIf="showDetail">
+                <p class="overview">
+                    {{movie.overview}}
+                </p>
+            </mat-card-content>
+            <mat-card-actions *ngIf="showDetail">
+                <button mat-button>Ver Detalle</button>
+            </mat-card-actions>
+        </mat-card>
+    </div>
+</div>
